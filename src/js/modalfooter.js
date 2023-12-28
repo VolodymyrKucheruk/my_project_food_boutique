@@ -75,7 +75,7 @@ return `
     height="22"
     data-modal-close
   >
-    <use href="./img/sptite.svg#icon-close"></use>
+    <use href="../img/sptite.svg#icon-close"></use>
   </svg>
   <div class="modal-wrapper-title">
     <p class="modal-subscr-title">
