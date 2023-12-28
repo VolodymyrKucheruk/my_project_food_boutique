@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/my_project_food_boutique/assets/favicon-fb9e3f0d.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>🍓Food Boutique🥦</title>
-  <script type="module" crossorigin src="/my_project_food_boutique/commonHelpers2.js"></script>
-  <link rel="modulepreload" crossorigin href="/my_project_food_boutique/assets/sptite-28570041.js">
-  <link rel="modulepreload" crossorigin href="/my_project_food_boutique/assets/vendor-3d334923.js">
-  <link rel="stylesheet" href="/my_project_food_boutique/assets/sptite-4c2dbd56.css">
-  <link rel="stylesheet" href="/my_project_food_boutique/assets/vendor-4d59271d.css">
-</head>
-
-<body>
-  <header>
-    <div class="container header-container">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/my_project_food_boutique/assets/favicon-fb9e3f0d.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>🍓My Food Boutique!!!!🥦</title>
+      
+    <script type="module" crossorigin src="/my_project_food_boutique/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/my_project_food_boutique/assets/sptite-215fcd91.js">
+    <link rel="modulepreload" crossorigin href="/my_project_food_boutique/assets/vendor-3d334923.js">
+    <link rel="stylesheet" href="/my_project_food_boutique/assets/sptite-f680fe87.css">
+    <link rel="stylesheet" href="/my_project_food_boutique/assets/vendor-4d59271d.css">
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <header>
+      <div class="container header-container">
   <div class="header-container-logo">
     <a class="header-logo" href="./index.html">
       <svg class="header-logo-icon" width="16" height="16">
@@ -40,11 +40,10 @@
     </div>
   </div>
 </div>
+    </header>
 
-  </header>
-
-  <main>
-    <section class="hero-section">
+    <main>
+      <section class="hero-section">
   <div class="container">
     <h1 class="hero-title">
       Welcome to the<span class="hero-span"> Food </span>Boutique!
@@ -60,8 +59,7 @@
     </div>
   </div>
 </section>
-
-    <div class="container">
+      <div class="container">
     <form class="filters-form">
         <label class="filters-form-label">Filters:</label>
         <input 
@@ -75,17 +73,24 @@
             </svg> 
         </button>
         <select class="filters-form-select-category" id="category">
-            <option value="" selected hidden>Show all</option>
+            <option data-placeholder="true">Categories</option>
         </select>
-        <!-- <select class="filters-form-select-sortby">
-            <option value="" disabled selected hidden>A to Z</option>
+        <!-- <select class="filters-form-select-sortby" id="sort">
+            <option data-placeholder="true">A to Z</option>
+            <option value="alphabetical">A to Z</option>
+            <option value="reverse-alphabetical">Z to A</option>
+            <option value="cheap">Cheap</option>
+            <option value="expensive">Expensive</option>
+            <option value="popular">Popular</option>
+            <option value="not-popular">Not popular</option>
+            <option value="">Show all</option>
         </select> -->
     </form>
 </div>
 
 
-    <div class="container wrapper">
-      <div class="products-list"></div>
+      <div class="container wrapper">
+        <div class="products-list"></div>
 <div class="products-list-none hidden">
     <p class="products-list-none-header">Nothing was found for the selected <span
             class="products-list-none-header-span">filters...</span></p>
@@ -94,8 +99,8 @@
     </p>
 </div>
 
-      <div>
-        <h2 class="popular__products-title">Popular products</h2>
+        <div>
+          <h2 class="popular__products-title">Popular products</h2>
 <ul class="wrapperPopularProduct"></ul>
 <!-- <ul>
   <li class="popular__products-items">
@@ -129,11 +134,17 @@
     </button>
   </li>
 </ul> -->
+          <h2 class="title-discount-prod">Discount products</h2>
 
-        
+
+<!-- <div class="slider"> -->
+<ul class="card-discount-prod slider-col"></ul>
+<!-- </div> -->
+
+
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
 
     <footer>
       <footer class="footer">
@@ -243,13 +254,12 @@
     </div>
   </div>
 </footer>
-
-
     </footer>
+
     <!-- <div class="backdrop" data-modal>
   <div class="modal-container subscribing-container modal-product" data-modal>
     <svg
-      class="modal-product-close-icon"
+      class="modal-product-close-icon sub-icon"
       width="22"
       height="22"
       data-modal-close
@@ -282,8 +292,7 @@
       alt="Vegetables"
     />
   </div>
-</div>
- -->
+</div> -->
     <!-- <div class="backdrop" data-modal>
   <div class="modal-container email-container modal-product" data-modal>
     <svg
@@ -292,7 +301,7 @@
       height="22"
       data-modal-close
     >
-      <use href="./img/sptite.svg#icon-close"></use>
+      <use href="../img/sptite.svg#icon-close"></use>
     </svg>
     <div class="modal-wrapper-title">
       <p class="modal-subscr-title">
@@ -306,13 +315,11 @@
         mailing address.
       </p>
     </div>
-  </div>
-</div>
- -->
-    <!-- <div class="backdrop" data-modal>
+  </div> -->
+
+    <div class="backdrop is-hidden" data-modal>
   <div
     class="modal-container email-container cartmodal-container modal-product"
-    data-modal
   >
     <svg
       class="modal-product-close-icon"
@@ -320,11 +327,11 @@
       height="22"
       data-modal-close
     >
-      <use href="./img/sptite.svg#icon-close"></use>
+      <use href="/my_project_food_boutique/assets/sptite-a7153163.svg#icon-close"></use>
     </svg>
     <div class="modal-success-icon-wrapper">
       <svg class="order-success" width="120" height="120">
-        <use href="./img/sptite.svg#order-success"></use>
+        <use href="/my_project_food_boutique/assets/sptite-a7153163.svg#order-success"></use>
       </svg>
     </div>
 
@@ -341,7 +348,7 @@
     </div>
   </div>
 </div>
- -->
+
     
   </body>
 </html>

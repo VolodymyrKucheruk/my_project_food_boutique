@@ -1,7 +1,7 @@
-import{c as l}from"./assets/sptite-28570041.js";const i="/my_project_food_boutique/assets/yellow-shopping-basket@1x-fe591d80.png",f="/my_project_food_boutique/assets/yellow-shopping-basket@2x-61cba68c.png",y=`
+import{c as i}from"./assets/sptite-215fcd91.js";const u="/my_project_food_boutique/assets/yellow-shopping-basket@1x-fe591d80.png",f="/my_project_food_boutique/assets/yellow-shopping-basket@2x-61cba68c.png",y=`
     <picture class="empty-basket">
-        <source srcset="${i} 1x, ${f} 2x" />
-        <img src="${i}" alt="basket" class="basket-empty-img"/>
+        <source srcset="${u} 1x, ${f} 2x" />
+        <img src="${u}" alt="basket" class="basket-empty-img"/>
     </picture>
     <h3 class="empty-basket-title">
         Your basket is
@@ -10,7 +10,7 @@ import{c as l}from"./assets/sptite-28570041.js";const i="/my_project_food_boutiq
     <p class="empty-basket-text">
         Go to the main page to select your favorite products and add them to the cart.
     </p>
-`;function m(){const t=document.querySelector(".js-cart-info"),e=document.querySelector(".js-header-span"),c=JSON.parse(localStorage.getItem("cart"))||[];t&&(t.textContent=c.length),e&&(e.textContent=c.length)}function g(){const t=document.querySelector(".cart-delete-all-btn");if(t){const e=()=>{localStorage.setItem("cart","[]"),m(),u([]),t.removeEventListener("click",e)};t.addEventListener("click",e)}}function b(t){let e=0;for(const c of t)e+=c.price*c.quantity;return e.toFixed(2)}function $(t){return`
+`;function m(){const t=document.querySelector(".js-cart-info"),e=document.querySelector(".js-header-span"),a=JSON.parse(localStorage.getItem("cart"))||[];t&&(t.textContent=a.length),e&&(e.textContent=a.length)}function g(){const t=document.querySelector(".cart-delete-all-btn");if(t){const e=()=>{localStorage.setItem("cart","[]"),m(),l([]),t.removeEventListener("click",e)};t.addEventListener("click",e)}}function b(t){let e=0;for(const a of t)e+=a.price*a.quantity;return e.toFixed(2)}function $(t){return`
     <div class="basket-full-container">
         <div class="cart-with-items-container">
         
@@ -18,42 +18,42 @@ import{c as l}from"./assets/sptite-28570041.js";const i="/my_project_food_boutiq
                 <p class="cart-delete-all-text">Delete all</p>
                 <button type="button" class="cart-delete-all-btn">
                     <svg class="delete-all-icon-svg">
-                        <use href="${l}#icon-close"></use>
+                        <use href="${i}#icon-close"></use>
                     </svg>
                 </button>
             </div>
 
             <ul class="cart-with-items-list">
-            ${t.map(({category:c,img:r,name:s,price:n,size:o,_id:a,quantity:v})=>`
-                <li class="cart-product-list" data-cart-product-id=${a}>
+            ${t.map(({category:a,img:s,name:r,price:o,size:n,_id:c,quantity:v})=>`
+                <li class="cart-product-list" data-cart-product-id=${c}>
                     <div class="cart-product-img-container">
-                        <img class="cart-product-img" src=${r} alt=${s}/>
+                        <img class="cart-product-img" src=${s} alt=${r}/>
                     </div>
                     <div class="cart-product-list-description">
                     <div class="cart-product-list-info">
-                        <p class="cart-product-name">${s}</p>
+                        <p class="cart-product-name">${r}</p>
                         <div class="cart-product-features">
-                            <p class="cart-product-category">Category: <span class="cart-product-category-span">${c.replace(/_/g," ")}</span></p>
-                            <p class="cart-product-size">Size: <span class="cart-product-size-span">${o}</span></p>
+                            <p class="cart-product-category">Category: <span class="cart-product-category-span">${a.replace(/_/g," ")}</span></p>
+                            <p class="cart-product-size">Size: <span class="cart-product-size-span">${n}</span></p>
                         </div>
-                        <p class="cart-product-info-price">$${n}</p>
+                        <p class="cart-product-info-price">$${o}</p>
                     </div>
                     <div class="cart-product-list-remove">
-                        <button class="cart-product-remove-btn" type="button" data-remove=${a}>
-                        <svg class="cart-product-remove-svg" data-remove=${a}>
-                            <use href="${l}#icon-close" data-remove=${a}></use>
+                        <button class="cart-product-remove-btn" type="button" data-remove=${c}>
+                        <svg class="cart-product-remove-svg" data-remove=${c}>
+                            <use href="${i}#icon-close" data-remove=${c}></use>
                         </svg>
                         </button>
                         <div class="cart-product-count-container">
-                            <button class="cart-product-count-decrease" type="button" data-decrease=${a}>
-                                <svg class="cart-product-count-decrease-svg" data-decrease=${a} hidden>
-                                    <use href="${l}#icon-" data-decrease=${a}></use>
+                            <button class="cart-product-count-decrease" type="button" data-decrease=${c}>
+                                <svg class="cart-product-count-decrease-svg" data-decrease=${c} hidden>
+                                    <use href="${i}#icon-minus" data-decrease=${c}></use>
                                 </svg>
                             </button>
-                            <p class="cart-product-count-text" data-count="${a}">${v}</p>
-                            <button class="cart-product-count-increase" type="button" data-increase=${a}>
-                                <svg class="cart-product-count-increase-svg" data-increase=${a} hidden>
-                                    <use href="${l}#icon-" data-increase=${a}></use>
+                            <p class="cart-product-count-text" data-count="${c}">${v}</p>
+                            <button class="cart-product-count-increase" type="button" data-increase=${c}>
+                                <svg class="cart-product-count-increase-svg" data-increase=${c} hidden>
+                                    <use href="${i}#icon-plus" data-increase=${c}></use>
                                 </svg>
                             </button>
                         </div>
@@ -83,5 +83,5 @@ import{c as l}from"./assets/sptite-28570041.js";const i="/my_project_food_boutiq
                 </form>
             </div>
     </div>
-    `}function h(t){const e=document.querySelector(".cart-with-items-list");e&&e.addEventListener("click",c=>{const r=c.target.dataset.remove;if(r){const s=t.filter(n=>n._id!==r);localStorage.setItem("cart",JSON.stringify(s)),u(s)}})}function k(t){S(t)}function d(t,e,c,r){const n=c.map(o=>{if(o._id===t){const a=Math.max(0,o.quantity+e);return r.textContent=a,a===0?null:{...o,quantity:a}}return o}).filter(o=>o!==null);localStorage.setItem("cart",JSON.stringify(n)),u(n)}function S(t){t.forEach(({_id:e})=>{const c=document.querySelector(`.cart-product-count-decrease[data-decrease="${e}"]`),r=document.querySelector(`.cart-product-count-increase[data-increase="${e}"]`),s=document.querySelector(`.cart-product-count-text[data-count="${e}"]`);c&&r&&(c.addEventListener("click",()=>d(e,-1,t,s)),r.addEventListener("click",()=>d(e,1,t,s)))})}const p=document.querySelector(".js-basket"),x=JSON.parse(localStorage.getItem("cart"))||[];function u(t){m(),t.length===0?p.innerHTML=y:p.innerHTML=$(t),g(),h(t),k(t)}u(x);
+    `}function h(t){const e=document.querySelector(".cart-with-items-list");e&&e.addEventListener("click",a=>{const s=a.target.dataset.remove;if(s){const r=t.filter(o=>o._id!==s);localStorage.setItem("cart",JSON.stringify(r)),l(r)}})}function k(t){S(t)}function d(t,e,a,s){const o=a.map(n=>{if(n._id===t){const c=Math.max(0,n.quantity+e);return s.textContent=c,c===0?null:{...n,quantity:c}}return n}).filter(n=>n!==null);localStorage.setItem("cart",JSON.stringify(o)),l(o)}function S(t){t.forEach(({_id:e})=>{const a=document.querySelector(`.cart-product-count-decrease[data-decrease="${e}"]`),s=document.querySelector(`.cart-product-count-increase[data-increase="${e}"]`),r=document.querySelector(`.cart-product-count-text[data-count="${e}"]`);a&&s&&(a.addEventListener("click",()=>d(e,-1,t,r)),s.addEventListener("click",()=>d(e,1,t,r)))})}const p=document.querySelector(".js-basket"),q=JSON.parse(localStorage.getItem("cart"))||[];function l(t){m(),t.length===0?p.innerHTML=y:p.innerHTML=$(t),g(),h(t),k(t)}l(q);(()=>{const t={openModal:document.querySelector(".cart-form-order-input"),closeModalBtn:document.querySelector("[data-modal-close]"),modal:document.querySelector("[data-modal]")},e=document.querySelector(".backdrop");t.openModal.addEventListener("submit",function(o){o.preventDefault(),t.openModal.reset(),localStorage.setItem("cart",JSON.stringify([])),l([]),r()}),t.closeModalBtn.addEventListener("click",r),e.addEventListener("click",a);function a(o){o.target===e&&r()}document.addEventListener("keydown",s);function s(o){o.code==="Escape"&&(r(),document.removeEventListener("keydown",s))}function r(){t.modal.classList.toggle("is-hidden")}})();
 //# sourceMappingURL=commonHelpers.js.map
