@@ -26,10 +26,12 @@
   /* colors */
   --p_color: #6d8434;
   --c_color: #586f1f;
-  --background: #e8e8e2;
-  --current-white: #fafafa;
+  --background: #EBECF0;
+  --current-white: #EBECF0;
   --current-gray: #a3a3a3;
   --current-yellow: #fdc152;
+  --color-shadow: #BABECC;
+  --color-white: #FFF;
   /* color-text */
   --p_color-text: #010101;
   --p_color-text-alfa30: rgba(1, 1, 1, 0.3);
@@ -49,7 +51,15 @@
   |============================
 */
 /* phone screen*/
+
+/* #particles-js{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+} */
 .container {
+ 
   min-width: 320px;
   max-width: 335px;
 
@@ -163,6 +173,7 @@
 }
 
 body {
+  
   background-color: var(--background);
   font-family: var(--main-font);
   color: var(--p_color-text);
@@ -174,3 +185,4 @@ body {
     gap: 40px;
   }
 }
+

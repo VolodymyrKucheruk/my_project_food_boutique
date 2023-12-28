@@ -38,16 +38,15 @@
   flex-wrap: wrap;
 }
 .modal-container {
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: -5px -5px 20px #29292972, 5px 5px 20px #1616167b;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  transition: transform var(--animation);
+  transition: all 0.2s ease-in-out;
   padding: 24px;
   padding-top: 72px;
   border-radius: 20px;
-  background: var(--current-white);
+  background: var(--background);
   padding-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
@@ -89,7 +88,6 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 1.11;
-
   color: var(--p_color-text);
 }
 .modal-wimdow-add-to-cart-btn {
@@ -98,7 +96,7 @@
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  transition: background-color var(--animation);
+  transition: all 0.2s ease-in-out;
 
   justify-content: center;
   align-items: center;
@@ -127,11 +125,12 @@
 }
 .modal-product-container-img {
   border-radius: 10px;
-  background-color: #e8e8e2;
   padding-top: 26px;
   padding-bottom: 26px;
   padding-left: 68px;
   padding-right: 67px;
+  box-shadow: rgba(183, 196, 208, 0.903) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.738) -3px -3px 6px 1px inset;
+  background-color: var(--background);
 }
 .modal-product-close-icon {
   position: absolute;

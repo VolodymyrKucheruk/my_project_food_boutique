@@ -34,6 +34,15 @@
   padding: 12px;
   border-radius: 10px;
   background: var(--current-white);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+.popular__products-items:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.popular__products-items:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
 @media only screen and (min-width: 768px) {
   .popular__products-items {
@@ -52,6 +61,8 @@
   max-height: 65px;
   border-radius: 10px;
   background: var(--background);
+  border: #1212120b solid 0.1px;
+  box-shadow: rgba(183, 196, 208, 0.903) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.738) -3px -3px 6px 1px inset;
 }
 .popular__products-name {
   font-size: 18px;
